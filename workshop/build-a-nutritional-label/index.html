@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition Label</title>
+
+  <!-- Step 4: Link Open Sans in three weights and connect my stylesheet. -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+  <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Step 7: Wrap the label content in a div with the label class. -->
+  <div class="label">
+    <!-- Step 24: Group the title and serving details in a header. -->
+    <header>
+      <!-- Step 1: Add the Nutrition Facts heading. Step 21: Apply the bold class. -->
+      <h1 class="bold">Nutrition Facts</h1>
+
+      <!-- Step 16: Add a thin divider below the title. -->
+      <div class="divider"></div>
+
+      <!-- Step 2: Add the number of servings. -->
+      <p>8 servings per container</p>
+
+      <!-- Step 3: Add the serving size. Step 19: Make the row bold. -->
+      <!-- Step 22: Wrap the amount in a span so it can sit on the right. -->
+      <p class="bold">Serving size <span>2/3 cup (55g)</span></p>
+    </header>
+
+    <!-- Step 26: Add a large divider below the header. -->
+    <div class="divider large"></div>
+
+    <!-- Step 29: Create the calories section. -->
+    <div class="calories-info">
+      <!-- Step 30: Add a left container with the Amount per serving heading. -->
+      <div class="left-container">
+        <h2 class="bold small-text">Amount per serving</h2>
+
+        <!-- Step 33: Add the Calories label and the 230 value beside it. -->
+        <p>Calories</p>
+      </div>
+      <span>230</span>
+    </div>
+
+    <!-- Step 38: Add a medium divider below the calories row. -->
+    <div class="divider medium"></div>
+
+    <!-- Step 40: Create the Daily Value section and heading row. -->
+    <!-- Step 49: Add no-divider to the heading and Saturated Fat rows. -->
+    <div class="daily-value small-text">
+      <p class="bold right no-divider">% Daily Value *</p>
+
+      <!-- Step 42: Add a divider below the Daily Value heading. -->
+      <div class="divider"></div>
+
+      <!-- Step 43: Add Total Fat and bold the name and percentage. -->
+      <!-- Step 44: Group the name and amount so Flexbox keeps them together. -->
+      <p><span><span class="bold">Total Fat</span> 8g</span> <span class="bold">10%</span></p>
+
+      <!-- Step 45: Add Saturated Fat. Step 46: Indent the row. -->
+      <p class="indent no-divider">Saturated Fat 1g <span class="bold">5%</span></p>
+
+      <!-- Step 51: Add a separate divider below Saturated Fat. -->
+      <div class="divider"></div>
+
+      <!-- Step 52: Add Trans Fat and italicize the word Trans. -->
+      <p class="indent no-divider"><span><i>Trans</i> Fat 0g</span></p>
+
+      <!-- Step 53: Add a separate divider below Trans Fat. -->
+      <div class="divider"></div>
+
+      <!-- Step 54: Add Cholesterol, with the amount on the left and 0% on the right. -->
+      <p><span><span class="bold">Cholesterol</span> 0mg</span> <span class="bold">0%</span></p>
+
+      <!-- Step 55: Add Sodium using the same span structure. -->
+      <p><span><span class="bold">Sodium</span> 160mg</span> <span class="bold">7%</span></p>
+
+      <!-- Step 56: Add Total Carbohydrate using the same layout. -->
+      <p><span><span class="bold">Total Carbohydrate</span> 37g</span> <span class="bold">13%</span></p>
+
+      <!-- Step 57: Add the indented Dietary Fiber row and its divider. -->
+      <p class="indent no-divider">Dietary Fiber 4g</p>
+      <div class="divider"></div>
+
+      <!-- Step 58: Add the indented Total Sugars row and its divider. -->
+      <p class="indent no-divider">Total Sugars 12g</p>
+
+      <!-- Step 59: Give the divider below Total Sugars a double indent. -->
+      <div class="divider double-indent"></div>
+
+      <!-- Step 61: Double-indent Added Sugars, bold 20%, and add a divider. -->
+      <p class="double-indent no-divider">Includes 10g Added Sugars <span class="bold">20%</span></p>
+      <div class="divider"></div>
+
+      <!-- Step 62: Add Protein and follow it with a large divider. -->
+      <p class="no-divider"><span><span class="bold">Protein</span> 3g</span></p>
+      <div class="divider large"></div>
+
+      <!-- Step 63: Add Vitamin D and wrap its percentage in a span. -->
+      <p>Vitamin D 2mcg <span>10%</span></p>
+
+      <!-- Step 64: Add Calcium and Iron with their percentages on the right. -->
+      <p>Calcium 260mg <span>20%</span></p>
+      <p>Iron 8mg <span>45%</span></p>
+
+      <!-- Step 65: Add Potassium and skip the border on the last row. -->
+      <p class="no-divider">Potassium 235mg <span>6%</span></p>
+    </div>
+
+    <!-- Step 66: Add a medium divider and the Daily Value footnote. -->
+    <div class="divider medium"></div>
+    <p class="note">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily
+      diet. 2,000 calories a day is used for general nutrition advice.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* Step 11: Count padding and borders inside the declared width. */
+* {
+  box-sizing: border-box;
+}
+
+/* Step 6: Set the root font size for rem units. */
+html {
+  font-size: 16px;
+}
+
+/* Step 5: Use Open Sans with a sans-serif fallback. */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Steps 8–10: Add the border, set the width, then center and pad the label. */
+.label {
+  border: 2px solid black;
+  width: 270px;
+  margin: 20px auto;
+  padding: 0 7px;
+}
+
+/* Step 25: Narrow the original h1 selector to headings inside the header. */
+header h1 {
+  /* Step 13: Center the heading. */
+  text-align: center;
+
+  /* Step 14: Tighten the space above and below it. */
+  margin: -4px 0;
+
+  /* Step 18: Add a little space between letters. */
+  letter-spacing: 0.15px;
+}
+
+p {
+  /* Step 15: Remove the browser's default paragraph margins. */
+  margin: 0;
+
+  /* Step 23: Space the contents of each row apart with Flexbox. */
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Step 17: Style thin dividers with a gray border and vertical spacing. */
+.divider {
+  border-bottom: 1px solid #888989;
+  margin: 2px 0;
+}
+
+/* Step 12: Start with weight 800 on h1.
+   Step 20: Move that weight into a class I can reuse. */
+.bold {
+  font-weight: 800;
+}
+
+/* Step 27: Set the large divider height and give both bar sizes a black fill. */
+.large {
+  height: 10px;
+}
+
+.large,
+.medium {
+  background-color: black;
+
+  /* Step 28: Remove the thin border inherited from .divider. */
+  border: 0;
+}
+
+/* Step 39: Set the medium divider to half the height of the large one. */
+.medium {
+  height: 5px;
+}
+
+/* Step 31: Size small text relative to the root font size. */
+.small-text {
+  font-size: 0.85rem;
+}
+
+/* Step 34: Spread the calorie label and value apart and align their bottoms. */
+.calories-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Step 32: Remove the default margin around Amount per serving. */
+.calories-info h2 {
+  margin: 0;
+}
+
+/* Step 35: Enlarge and position the Calories text. */
+.left-container p {
+  margin: -5px -2px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.calories-info span {
+  /* Step 37: Adjust the position of the calorie number. */
+  margin: -7px -2px;
+
+  /* Step 36: Make the calorie number larger and bold. */
+  font-size: 2.4em;
+  font-weight: 700;
+}
+
+/* Step 41: Move the Daily Value heading to the right. */
+.right {
+  justify-content: flex-end;
+}
+
+/* Step 47: Indent sub-rows by one em. */
+.indent {
+  margin-left: 1em;
+}
+
+/* Step 60: Give Added Sugars and its divider a deeper indent. */
+.double-indent {
+  margin-left: 2em;
+}
+
+/* Step 48: Add a bottom border to nutrient rows.
+   Step 50: Use :not() to skip rows with the no-divider class. */
+.daily-value p:not(.no-divider) {
+  border-bottom: 1px solid #888989;
+}
+
+.note {
+  /* Step 67: Make the footnote smaller and add vertical spacing. */
+  font-size: 0.6rem;
+  margin: 5px 0;
+
+  /* Step 68: Use a hanging indent so the asterisk sits to the left. */
+  padding: 0 8px;
+  text-indent: -8px;
+}
