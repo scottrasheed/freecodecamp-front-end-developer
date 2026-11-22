@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- Step 41 | Put the HTML5 doctype on the first line. -->
+<!-- Step 40 | Set the document language to English. -->
+<html lang="en">
+  <!-- Step 38 | Add a head for the page metadata. -->
+  <head>
+    <!-- Step 42 | Set the character encoding to UTF-8. -->
+    <meta charset="UTF-8">
+
+    <!-- Step 39 | Set the title shown in the browser tab. -->
+    <title>CatPhotoApp</title>
+  </head>
+  <body>
+    <!-- Step 05 | Wrap the page's main content in a main element. -->
+    <main>
+      <!-- Step 01 | Add the page's main heading. -->
+      <h1>CatPhotoApp</h1>
+
+      <!-- Step 18 | Group the photos, paragraphs, and links in a section. -->
+      <section>
+        <!-- Step 02 | Add the Cat Photos heading. -->
+        <h2>Cat Photos</h2>
+
+        <!-- Step 04 | Add the original comment: TODO: Add link to cat photos
+             Step 16 | Remove that TODO after adding the link. -->
+
+        <!-- Step 03 | Add the introductory paragraph.
+             Step 06 | Indent the paragraph inside main. It was later moved into this section.
+             Step 14 | Turn "cute cats" into a link to the running cats photo. -->
+        <p>Everyone loves <a href="https://cdn.freecodecamp.org/curriculum/cat-photo-app/running-cats.jpg">cute cats</a> online!</p>
+
+        <!-- Step 10 | Add an anchor that points to the cat photo gallery.
+             Step 11 | Give the anchor the visible text "cat photos".
+             Step 12 | Add the words before and after the link.
+             Step 13 | Wrap the sentence in a paragraph.
+             Step 15 | Open the gallery in a new tab with target="_blank". -->
+        <p>See more <a target="_blank" href="https://freecatphotoapp.com">cat photos</a> in our gallery.</p>
+
+        <!-- Step 17 | Wrap the image in a link to the gallery. -->
+        <a href="https://freecatphotoapp.com">
+          <!-- Step 07 | Add the first img element.
+               Step 08 | Set its src to the relaxing cat photo.
+               Step 09 | Add alt text describing the photo. -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+            alt="A cute orange cat lying on its back."
+          >
+        </a>
+      </section>
+
+      <!-- Step 19 | Add a second section for the lists. -->
+      <section>
+        <!-- Step 20 | Add the Cat Lists heading. -->
+        <h2>Cat Lists</h2>
+
+        <!-- Step 21 | Add the heading for things cats love. -->
+        <h3>Things cats love:</h3>
+
+        <!-- Step 22 | Create an unordered list. -->
+        <ul>
+          <!-- Step 23 | Add the three things cats love. -->
+          <li>catnip</li>
+          <li>laser pointers</li>
+          <li>lasagna</li>
+        </ul>
+
+        <!-- Step 25 | Wrap the lasagna image in a figure. -->
+        <figure>
+          <!-- Step 24 | Add the lasagna image with descriptive alt text. -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg"
+            alt="A slice of lasagna on a plate."
+          >
+
+          <!-- Step 26 | Add the caption.
+               Step 27 | Emphasize "love" with em. -->
+          <figcaption>Cats <em>love</em> lasagna.</figcaption>
+        </figure>
+
+        <!-- Step 28 | Add the heading for things cats hate. -->
+        <h3>Top 3 things cats hate:</h3>
+
+        <!-- Step 29 | Create an ordered list with three items. -->
+        <ol>
+          <li>flea treatment</li>
+          <li>thunder</li>
+          <li>other cats</li>
+        </ol>
+
+        <!-- Step 30 | Add a second figure below the ordered list. -->
+        <figure>
+          <!-- Step 31 | Add the photo of two cats.
+               Step 32 | Add alt text describing the kittens. -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+            alt="Two tabby kittens sleeping together on a couch."
+          >
+
+          <!-- Step 33 | Add the caption.
+               Step 34 | Mark "hate" as important with strong. -->
+          <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <!-- Step 35 | Add a footer after main. -->
+    <footer>
+      <!-- Step 36 | Add the footer paragraph.
+           Step 37 | Link the freeCodeCamp.org text to the website. -->
+      <p>No Copyright - <a href="https://www.freecodecamp.org">freeCodeCamp.org</a></p>
+    </footer>
+  </body>
+</html>
