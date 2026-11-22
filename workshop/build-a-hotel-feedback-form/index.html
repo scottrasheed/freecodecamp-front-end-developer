@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hotel Feedback Form</title>
+  </head>
+  <body>
+    <!-- Step 01 | Add the header, page title, and introductory paragraph. -->
+    <header>
+      <h1>Hotel Feedback Form</h1>
+      <p>Thank you for staying with us. Please provide feedback on your recent stay.</p>
+    </header>
+
+    <!-- Step 02 | Add the main element for the page content. -->
+    <main>
+      <!-- Step 03 | Create a form that sends feedback with POST. -->
+      <form method="POST" action="https://hotel-feedback.freecodecamp.org">
+        <!-- Step 04 | Group the personal information fields. -->
+        <fieldset>
+          <!-- Step 05 | Name the group with a legend. -->
+          <legend>Personal Information</legend>
+
+          <!-- Step 06 | Add the name label and its input.
+               Step 07 | Set type="text" and match the input id to the label.
+               Step 08 | Set name="name" as the submission key.
+               Step 09 | Add a placeholder and make the field required. -->
+          <label for="full-name">Name (required):</label>
+          <input
+            type="text"
+            id="full-name"
+            name="name"
+            placeholder="e.g., John Doe"
+            required
+            size="20"
+          >
+
+          <!-- Step 10 | Add the email label. -->
+          <label for="email">Email address (required):</label>
+
+          <!-- Step 11 | Add the required email input and its placeholder.
+               Step 12 | Set size="20" on both the name and email inputs. -->
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required
+            size="20"
+          >
+
+          <!-- Step 13 | Add the optional age label. -->
+          <label for="age">Age (optional):</label>
+
+          <!-- Step 14 | Add a number input with a range of 3 to 100. -->
+          <input type="number" id="age" name="age" min="3" max="100">
+        </fieldset>
+
+        <!-- Step 15 | Add a fieldset for the first-stay question. -->
+        <fieldset>
+          <legend>Was this your first time at our hotel?</legend>
+
+          <!-- Step 16 | Add the Yes radio button and label. -->
+          <input type="radio" id="yes-option" name="hotel-stay" value="yes">
+          <label for="yes-option">Yes</label>
+
+          <!-- Step 17 | Add No with the same name so only one answer can be selected. -->
+          <input type="radio" id="no-option" name="hotel-stay" value="no">
+          <label for="no-option">No</label>
+        </fieldset>
+
+        <!-- Step 18 | Add a fieldset for the reasons guests chose the hotel. -->
+        <fieldset>
+          <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+
+          <!-- Step 19 | Add the Social Media Ads checkbox. -->
+          <input type="checkbox" id="ads" name="choice" value="ads">
+          <label for="ads">Social Media Ads</label>
+
+          <!-- Step 20 | Add the Personal Recommendation checkbox. -->
+          <input
+            type="checkbox"
+            id="recommendation"
+            name="choice"
+            value="recommendation"
+          >
+          <label for="recommendation">Personal Recommendation</label>
+
+          <!-- Step 21 | Add the Location and Reputation checkboxes. -->
+          <input type="checkbox" id="location" name="choice" value="location">
+          <label for="location">Location</label>
+
+          <!-- Step 22 | Check Reputation by default. -->
+          <input type="checkbox" id="reputation" name="choice" value="reputation" checked>
+          <label for="reputation">Reputation</label>
+
+          <!-- Step 23 | Add the Price checkbox. -->
+          <input type="checkbox" id="price" name="choice" value="price">
+          <label for="price">Price</label>
+        </fieldset>
+
+        <!-- Step 24 | Add the Ratings fieldset, legend, and service label. -->
+        <fieldset>
+          <legend>Ratings</legend>
+          <label for="service">How was the service?</label>
+
+          <!-- Step 25 | Create the service dropdown. -->
+          <select id="service" name="service">
+            <!-- Step 26 | Add the five rating options. -->
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+
+            <!-- Step 27 | Select Excellent by default. -->
+            <option value="excellent" selected>Excellent</option>
+          </select>
+
+          <!-- Step 28 | Add the food label and dropdown. -->
+          <label for="food">How was the food?</label>
+          <select id="food" name="food">
+            <!-- Step 29 | Add the five food ratings and default to Excellent. -->
+            <option value="poor">Poor</option>
+            <option value="satisfactory">Satisfactory</option>
+            <option value="good">Good</option>
+            <option value="very-good">Very Good</option>
+            <option value="excellent" selected>Excellent</option>
+          </select>
+        </fieldset>
+
+        <!-- Step 30 | Add the label for additional comments. -->
+        <label for="comments">Other Comments?</label>
+
+        <!-- Step 31 | Add a textarea for multiline feedback.
+             Step 32 | Set its id, name, columns, and rows. -->
+        <textarea id="comments" name="comments" cols="30" rows="10"></textarea>
+
+        <!-- Step 33 | Add the Submit button. -->
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
