@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Step 1: Set the page language and link styles.css in the head. -->
+<html lang="en">
+  <head>
+    <!-- Step 2: Use UTF-8 character encoding. -->
+    <meta charset="UTF-8" />
+
+    <!-- Step 3: Set the viewport width and initial zoom for mobile browsers. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Step 4: Add a short description of the page. -->
+    <meta name="description" content="freeCodeCamp Accessibility Quiz practice project" />
+
+    <!-- Step 5: Give the page a descriptive title. -->
+    <title>Accessibility Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Step 6: Use header for the introduction and main for the quiz. -->
+    <header>
+      <!-- Step 7: Add the logo with alt text, the heading, and the navigation. -->
+      <img id="logo" alt="freeCodeCamp" src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg" />
+      <h1>HTML/CSS Quiz</h1>
+      <nav>
+        <!-- Step 12: Add three navigation links in a list. -->
+        <!-- Step 18: Point each link to its matching section heading. -->
+        <ul>
+          <li><a href="#student-info">INFO</a></li>
+          <li><a href="#html-questions">HTML</a></li>
+          <li><a href="#css-questions">CSS</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Step 14: Create a POST form with three sections. -->
+      <!-- Step 15: Give each section the region role. -->
+      <!-- Step 16: Use aria-labelledby to name each region after its heading. -->
+      <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz">
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Student Info</h2>
+
+          <!-- Step 19: Add three rows, each with a label and an input. -->
+          <!-- Step 20: Match each label's for attribute to its input's id. -->
+          <!-- Step 21: Give each input a type and name. Try a name placeholder. -->
+          <!-- Step 22: Remove the placeholder and rely on the visible label. -->
+          <div class="info">
+            <label for="student-name">Name:</label>
+            <input type="text" name="student-name" id="student-name" />
+          </div>
+          <div class="info">
+            <label for="student-email">Email:</label>
+            <input type="email" name="student-email" id="student-email" />
+          </div>
+          <div class="info">
+            <label for="birth-date">Date of Birth:</label>
+            <input type="date" name="birth-date" id="birth-date" />
+          </div>
+        </section>
+
+        <section role="region" aria-labelledby="html-questions">
+          <h2 id="html-questions">HTML</h2>
+
+          <!-- Step 23: Add two numbered question blocks with fieldsets. -->
+          <!-- Step 24: Add an sr-only span before each question number. -->
+          <!-- Step 25: Put the word Question in each span. -->
+          <div class="question-block">
+            <h3><span class="sr-only">Question</span>1</h3>
+
+            <!-- Step 27: Put a legend and a two-item list in each fieldset. -->
+            <!-- Step 28: Name the fieldsets, write the prompts, and class the lists. -->
+            <fieldset class="question" name="html-question-one">
+              <legend>
+                The legend element represents a caption for the content of its
+                parent fieldset element
+              </legend>
+              <ul class="answers-list">
+                <!-- Step 29: Put a radio input inside each answer label. -->
+                <!-- Step 30: Give each radio input a unique id. -->
+                <!-- Step 31: Match the label's for attribute to that id. -->
+                <!-- Step 32: Add True and False text and corresponding values. -->
+                <!-- Step 33: Share a name within each pair so only one answer can be selected. -->
+                <li>
+                  <label for="q1-a1">
+                    <input type="radio" id="q1-a1" name="q1" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q1-a2">
+                    <input type="radio" id="q1-a2" name="q1" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+
+          <div class="question-block">
+            <h3><span class="sr-only">Question</span>2</h3>
+            <fieldset class="question" name="html-question-two">
+              <legend>
+                A label element nesting an input element is required to have a
+                for attribute with the same value as the input's id
+              </legend>
+              <ul class="answers-list">
+                <li>
+                  <label for="q2-a1">
+                    <input type="radio" id="q2-a1" name="q2" value="true" />
+                    True
+                  </label>
+                </li>
+                <li>
+                  <label for="q2-a2">
+                    <input type="radio" id="q2-a2" name="q2" value="false" />
+                    False
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <section role="region" aria-labelledby="css-questions">
+          <h2 id="css-questions">CSS</h2>
+
+          <!-- Step 35: Alternate question and answer blocks in a form row. -->
+          <!-- Step 36: Add a prompt to each question block using a label. -->
+          <div class="formrow">
+            <div class="question-block">
+              <label for="selector">Can the CSS margin property accept negative values?</label>
+            </div>
+            <div class="answer">
+              <!-- Step 37: Add a required dropdown with a prompt, Yes, and No. -->
+              <!-- Step 38: Give the dropdown a name and link it to its label. -->
+              <select name="selector" id="selector" required>
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="question-block">
+              <label for="css-textarea">Do you have any questions:</label>
+            </div>
+            <div class="answer">
+              <!-- Step 39: Add a textarea with five rows and 24 columns. -->
+              <!-- Step 40: Give the textarea a name and link it to its label. -->
+              <textarea id="css-textarea" name="css-questions" rows="5" cols="24"></textarea>
+            </div>
+          </div>
+        </section>
+
+        <!-- Step 41: Add a Send button to submit the form. -->
+        <button type="submit">Send</button>
+      </form>
+    </main>
+
+    <!-- Step 42: Add a footer with an address element. -->
+    <!-- Step 43: Use line breaks to put each address line on its own line. -->
+    <!-- Step 44: Link the freeCodeCamp name to its website. -->
+    <footer>
+      <address>
+        <a href="https://freecodecamp.org">freeCodeCamp</a><br />
+        San Francisco<br />
+        California<br />
+        USA
+      </address>
+    </footer>
+  </body>
+</html>

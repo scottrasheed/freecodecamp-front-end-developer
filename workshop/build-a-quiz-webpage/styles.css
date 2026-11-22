@@ -1,0 +1,225 @@
+/* Step 66: Make navigation links scroll smoothly to their sections.
+   Step 67: Apply smooth scrolling only when the user allows motion. */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: #f5f6f7;
+  color: #1b1b32;
+  font-family: Helvetica;
+  margin: 0;
+}
+
+header {
+  /* Step 10: Set the header size and background, and turn on Flexbox. */
+  width: 100%;
+  height: 50px;
+  background-color: #1b1b32;
+  display: flex;
+
+  /* Step 48: Space the header items apart and center them vertically. */
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  /* Step 8: Use the larger of 10rem and 18vw for the logo width. */
+  width: max(10rem, 18vw);
+
+  /* Step 9: Add a dark background, keep the logo's proportions, and pad it. */
+  background-color: #0a0a23;
+  aspect-ratio: 35 / 4;
+  padding: 0.4rem;
+}
+
+h1 {
+  /* Step 11: Give the title a gold color and cap its viewport-based size. */
+  color: #f1be32;
+  font-size: min(5vw, 1.2em);
+
+  /* Step 49: Center the title text when it wraps. */
+  text-align: center;
+}
+
+nav {
+  width: 50%;
+  max-width: 300px;
+  height: 50px;
+}
+
+nav > ul {
+  /* Step 13: Target the direct child list and space its items evenly. */
+  display: flex;
+  justify-content: space-evenly;
+
+  /* Step 50: Let links wrap on small screens and align the list. */
+  flex-wrap: wrap;
+  align-items: center;
+  padding-inline-start: 0;
+  margin-block: 0;
+  height: 100%;
+}
+
+/* Step 45: Give the navigation items a light color and add spacing. */
+nav > ul > li {
+  color: #dfdfe2;
+  margin: 0 0.2rem;
+  padding: 0.2rem;
+  display: block;
+}
+
+/* Step 47: Swap the colors on hover and show a pointer cursor. */
+nav > ul > li:hover {
+  background-color: #dfdfe2;
+  color: #1b1b32;
+  cursor: pointer;
+}
+
+li > a {
+  /* Step 46: Inherit the list item's color so the links have good contrast. */
+  color: inherit;
+
+  /* Step 47: Remove the default link underline. */
+  text-decoration: none;
+}
+
+/* Step 49: Add space above the first section heading. */
+main {
+  padding-top: 50px;
+}
+
+/* Step 51: Center the sections and cap their width at 600px. */
+section {
+  width: 80%;
+  margin: 0 auto 10px auto;
+  max-width: 600px;
+}
+
+/* Step 17: Use a readable font stack for headings and a border to mark sections. */
+h1,
+h2 {
+  font-family: Verdana, Tahoma;
+}
+
+h2 {
+  border-bottom: 4px solid #dfdfe2;
+
+  /* Step 52: Replace the top margin with top padding. */
+  margin-top: 0;
+  padding-top: 60px;
+}
+
+/* Step 53: Add top and left padding to the student information rows. */
+.info {
+  padding: 10px 0 0 5px;
+}
+
+/* Step 54: Space the CSS question rows and increase the input font size. */
+.formrow {
+  margin-top: 30px;
+  padding: 0 15px;
+}
+
+input {
+  font-size: 1rem;
+}
+
+/* Step 57: Use inline-block to align labels and inputs in each row. */
+.info label,
+.info input {
+  display: inline-block;
+}
+
+/* Step 55: Set the student inputs to half the row width and align their text. */
+.info input {
+  width: 50%;
+  text-align: left;
+}
+
+.info label {
+  /* Step 56: Size the labels and give them a minimum width. */
+  width: 10%;
+  min-width: 55px;
+
+  /* Step 57: Align label text toward the input. */
+  text-align: right;
+}
+
+/* Step 58: Give each question block a full row and space above it. */
+.question-block {
+  text-align: left;
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 5px;
+}
+
+/* Step 59: Make the question headings larger and adjust their spacing. */
+h3 {
+  margin-top: 5px;
+  padding-left: 15px;
+  font-size: 1.375rem;
+}
+
+/* Step 34: Add a visible prefix before the question numbers. */
+h3::before {
+  content: "Question #";
+}
+
+/* Step 60: Remove the default fieldset border and bottom padding. */
+.question {
+  border: none;
+  padding-bottom: 0;
+}
+
+/* Step 61: Remove bullets and padding from the answers list. */
+.answers-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Step 62: Center and style the Send button. */
+button {
+  display: block;
+  margin: 40px auto;
+  width: 40%;
+  padding: 15px;
+  font-size: 1.438rem;
+  background: #d0d0d5;
+  border: 3px solid #3b3b4f;
+}
+
+/* Step 63: Give the footer a dark background and center its content. */
+footer {
+  background-color: #2a2a40;
+  display: flex;
+  justify-content: center;
+}
+
+/* Step 64: Use a light color for readable footer text and links. */
+footer,
+footer a {
+  color: #dfdfe2;
+}
+
+/* Step 65: Center the address lines and add padding. */
+address {
+  text-align: center;
+  padding: 0.3em;
+}
+
+/* Step 26: Visually hide the text while keeping it available to screen readers. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
