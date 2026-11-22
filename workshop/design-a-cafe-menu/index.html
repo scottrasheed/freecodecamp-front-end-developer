@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Step 13 | Set the viewport width and initial scale for mobile. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafe Menu</title>
+
+    <!-- Step 06 | Start with a style element in the head.
+         Step 11 | Remove the style element after moving its rules to CSS.
+         Step 12 | Link the external stylesheet so the rules apply again. -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!-- Step 16 | Wrap the page content in a div with id="menu".
+         Step 23 | Replace id="menu" with class="menu". -->
+    <div class="menu">
+      <!-- Step 01 | Add main to hold the menu content. -->
+      <main>
+        <!-- Step 02 | Add the café name as the main heading. -->
+        <h1>CAMPER CAFE</h1>
+
+        <!-- Step 03 | Add the founding year.
+             Step 57 | Apply the established class to the year. -->
+        <p class="established">Est. 2020</p>
+
+        <!-- Step 63 | Add a divider above the coffee section. -->
+        <hr>
+
+        <!-- Step 04 | Create the coffee section. -->
+        <section>
+          <!-- Step 05 | Add the Coffee heading. -->
+          <h2>Coffee</h2>
+
+          <!-- Step 86 | Add a coffee icon below the heading. -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-cafe/coffee.jpg"
+            alt="coffee icon"
+          >
+
+          <!-- Step 25 | Add the first article for a coffee item.
+               Step 26 | Add the French Vanilla name and price paragraphs.
+               Step 28 | Give the name paragraph the flavor class.
+               Step 30 | Give the price paragraph the price class.
+               Step 32 | Give the article the item class.
+               Step 36 | Remove whitespace between the paragraphs so they fit on one row. -->
+          <article class="item">
+            <p class="flavor">French Vanilla</p><p class="price">3.00</p>
+          </article>
+
+          <!-- Step 27 | Add the four remaining coffees and their prices.
+               Step 38 | Apply the item class to the remaining articles.
+               Step 39 | Remove whitespace between each name and price.
+               Step 40 | Apply the flavor and price classes to those paragraphs. -->
+          <article class="item">
+            <p class="flavor">Caramel Macchiato</p><p class="price">3.75</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Pumpkin Spice</p><p class="price">3.50</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Hazelnut</p><p class="price">4.00</p>
+          </article>
+          <article class="item">
+            <p class="flavor">Mocha</p><p class="price">4.50</p>
+          </article>
+        </section>
+
+        <!-- Step 42 | Create a second section for desserts. -->
+        <section>
+          <!-- Step 43 | Add the Desserts heading. -->
+          <h2>Desserts</h2>
+
+          <!-- Step 88 | Add a pie icon below the heading. -->
+          <img
+            src="https://cdn.freecodecamp.org/curriculum/css-cafe/pie.jpg"
+            alt="pie icon"
+          >
+
+          <!-- Step 44 | Add the first dessert article with the item class.
+               Step 45 | Add Donut and 1.50 with no whitespace between the paragraphs.
+               Step 46 | Give the two paragraphs the dessert and price classes. -->
+          <article class="item">
+            <p class="dessert">Donut</p><p class="price">1.50</p>
+          </article>
+
+          <!-- Step 48 | Add the other three desserts and their prices. -->
+          <article class="item">
+            <p class="dessert">Cherry Pie</p><p class="price">2.75</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cheesecake</p><p class="price">3.00</p>
+          </article>
+          <article class="item">
+            <p class="dessert">Cinnamon Roll</p><p class="price">2.50</p>
+          </article>
+        </section>
+      </main>
+
+      <!-- Step 68 | Add another divider before the footer.
+           Step 73 | Apply the bottom-line class to this divider. -->
+      <hr class="bottom-line">
+
+      <!-- Step 59 | Add a footer below main. -->
+      <footer>
+        <!-- Step 60 | Add an address element for the contact information. -->
+        <address>
+          <!-- Step 61 | Add the website link and open it in a new tab. -->
+          <p>
+            <a href="https://www.freecodecamp.org" target="_blank">Visit our website</a>
+          </p>
+
+          <!-- Step 62 | Add the street address.
+               Step 85 | Apply the address class to the street address paragraph. -->
+          <p class="address">123 Free Code Camp Drive</p>
+        </address>
+      </footer>
+    </div>
+  </body>
+</html>

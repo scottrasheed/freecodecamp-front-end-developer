@@ -1,0 +1,178 @@
+body {
+  /*
+  Step 14 | Try a brown page background.
+  background-color: brown;
+
+  Step 15 | Switch to burlywood for easier reading.
+  background-color: burlywood;
+
+  Step 18 | Comment out the background color to see the menu panel on its own.
+  */
+
+  /* Step 24 | Replace the old background with a coffee bean image. */
+  background-image: url(https://cdn.freecodecamp.org/curriculum/css-cafe/beans.jpg);
+
+  /* Step 53 | Set the main text in a sans-serif font. */
+  font-family: sans-serif;
+
+  /* Step 69 | Give the page some space around the menu. */
+  padding: 20px;
+}
+
+/*
+Step 07 | Center h1 with a type selector.
+Step 08 | Center h2 and p with their own type selectors.
+Step 09 | Combine all three selectors into one rule.
+Step 10 | Move the combined rule into styles.css.
+*/
+h1, h2, p {
+  text-align: center;
+}
+
+h1 {
+  /* Step 58 | Make h1 40px and h2 30px. */
+  font-size: 40px;
+
+  /* Step 82 | Remove the default space above the title. */
+  margin-top: 0;
+
+  /* Step 83 | Reduce the space between the title and founding year. */
+  margin-bottom: 15px;
+}
+
+h2 {
+  /* Step 58 | Set the section heading size. */
+  font-size: 30px;
+}
+
+/* Step 54 | Use Impact for both headings.
+   Step 55 | Add serif as a fallback. */
+h1, h2 {
+  font-family: Impact, serif;
+}
+
+/* Step 56 | Italicize the founding year. */
+.established {
+  font-style: italic;
+}
+
+/* Step 17 | Start with #menu and width: 300px.
+   Step 22 | Change the ID selector to the class selector .menu. */
+.menu {
+  /* Step 20 | Switch to a percentage so the menu can resize. */
+  width: 80%;
+
+  /* Step 19 | Give the menu panel a burlywood background. */
+  background-color: burlywood;
+
+  /* Step 21 | Center the menu using automatic side margins. */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Step 49 | Add 20px padding on the left and right.
+     Step 50 | Add the same padding on the top and bottom.
+     Step 51 | Replace all four declarations with padding shorthand. */
+  padding: 20px;
+
+  /* Step 52 | Keep the menu from getting too wide. */
+  max-width: 500px;
+}
+
+img {
+  /* Step 87 | Make the icons block elements and center them. */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Step 89 | Pull the icons closer to their headings. */
+  margin-top: -25px;
+}
+
+hr {
+  /* Step 64 | Start with a height of 3px.
+     Step 67 | Reduce the height to 2px once the borders are visible. */
+  height: 2px;
+
+  /* Step 65 | Set the divider background to brown. */
+  background-color: brown;
+
+  /* Step 66 | Match the border color to the background. */
+  border-color: brown;
+}
+
+/* Step 72 | Add more space above the bottom divider. */
+.bottom-line {
+  margin-top: 25px;
+}
+
+.item p {
+  /* Step 33 | Let the name and price sit side by side. */
+  display: inline-block;
+
+  /* Step 70 | Tighten the vertical spacing between menu rows. */
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  /* Step 71 | Increase the size of the names and prices. */
+  font-size: 18px;
+}
+
+/*
+Step 34 | Try 50% width for each column.
+Step 35 | Try 49% to make room for the whitespace between inline blocks.
+Step 37 | Restore 50% after removing that whitespace in the HTML.
+Step 41 | Give names 75% of the row width and prices 25%.
+*/
+
+/* Step 29 | Left-align the coffee names.
+   Step 47 | Apply the same rule to dessert names. */
+.flavor, .dessert {
+  text-align: left;
+  width: 75%;
+}
+
+/* Step 31 | Right-align the prices. */
+.price {
+  text-align: right;
+  width: 25%;
+}
+
+/* Step 74 | Add the footer section marker. */
+/* FOOTER */
+
+/* Step 75 | Set the footer text size to 14px. */
+footer {
+  font-size: 14px;
+}
+
+/* Step 76 | Reset the address element's default italics. */
+address {
+  font-style: normal;
+}
+
+/* Step 84 | Reduce the space below the street address. */
+.address {
+  margin-bottom: 5px;
+}
+
+/* Step 77 | Set the default link color to black. */
+a {
+  color: black;
+}
+
+/* Step 78 | Try gray for visited links.
+   Step 81 | Use black for visited links and brown for active links. */
+a:visited {
+  color: black;
+}
+
+/* Step 79 | Show brown when the pointer hovers over the link. */
+a:hover {
+  color: brown;
+}
+
+/* Step 80 | Try white while the link is being clicked.
+   Step 81 | Change the active color from white to brown. */
+a:active {
+  color: brown;
+}
