@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance Sheet</title>
+
+    <!-- Step 1: Link the stylesheet. -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Step 2: Put the balance sheet section inside main. -->
+    <main>
+      <section>
+        <!-- Step 3: Add the main heading and its wrapper span. -->
+        <h1>
+          <!-- Step 4: Put the company name first in the HTML for reading order. -->
+          <span class="flex">
+            <span>AcmeWidgetCorp</span>
+            <span>Balance Sheet</span>
+          </span>
+        </h1>
+
+        <!-- Step 5: Hide the visual year bar from screen readers. -->
+        <div id="years" aria-hidden="true">
+          <!-- Step 6: Add the three visible year labels. -->
+          <span class="year">2019</span>
+          <span class="year">2020</span>
+          <span class="year">2021</span>
+        </div>
+
+        <!-- Step 7: Group the three tables in a shared wrapper. -->
+        <div class="table-wrap">
+          <table>
+            <!-- Step 8: Name the first table Assets. -->
+            <caption>Assets</caption>
+
+            <!-- Step 9: Divide the table into a head and a body. -->
+            <thead>
+              <!-- Step 10: Add a header row with one td and three th cells. -->
+              <tr>
+                <td></td>
+                <!-- Step 11: Add screen reader year labels and mark 2021 as current. -->
+                <th><span class="sr-only year">2019</span></th>
+                <th><span class="sr-only year">2020</span></th>
+                <th class="current"><span class="sr-only year">2021</span></th>
+              </tr>
+            </thead>
+
+            <!-- Step 12: Set up three data rows and one total row. -->
+            <tbody>
+              <!-- Step 13: Add Cash, its description, and the three yearly amounts. -->
+              <tr class="data">
+                <th>Cash <span class="description">This is the cash we currently have on hand.</span></th>
+                <td>$25</td>
+                <td>$30</td>
+                <td class="current">$28</td>
+              </tr>
+
+              <!-- Step 14: Add Checking and mark the latest amount as current. -->
+              <tr class="data">
+                <th>Checking <span class="description">Our primary transactional account.</span></th>
+                <td>$54</td>
+                <td>$56</td>
+                <td class="current">$53</td>
+              </tr>
+
+              <!-- Step 15: Add Savings and its description. -->
+              <tr class="data">
+                <th>Savings <span class="description">Funds set aside for emergencies.</span></th>
+                <td>$500</td>
+                <td>$650</td>
+                <td class="current">$728</td>
+              </tr>
+
+              <!-- Step 16: Add the asset totals and identify them as Total Assets for screen readers. -->
+              <tr class="total">
+                <th>Total <span class="sr-only">Assets</span></th>
+                <td>$579</td>
+                <td>$736</td>
+                <td class="current">$809</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Step 17: Set up the Liabilities caption, head, and body. -->
+          <table>
+            <caption>Liabilities</caption>
+            <thead>
+              <!-- Step 18: Add the empty cell and three column header cells. -->
+              <tr>
+                <td></td>
+                <!-- Step 19: Add the three screen reader year labels. -->
+                <th><span class="sr-only">2019</span></th>
+                <th><span class="sr-only">2020</span></th>
+                <th><span class="sr-only">2021</span></th>
+              </tr>
+            </thead>
+
+            <!-- Step 20: Set up three liability data rows and a total row. -->
+            <tbody>
+              <!-- Step 21: Add Loans and the year-by-year balances. -->
+              <tr class="data">
+                <th>Loans <span class="description">The outstanding balance on our startup loan.</span></th>
+                <td>$500</td>
+                <td>$250</td>
+                <td class="current">$0</td>
+              </tr>
+
+              <!-- Step 22: Add Expenses and its description. -->
+              <tr class="data">
+                <th>Expenses <span class="description">Annual anticipated expenses, such as payroll.</span></th>
+                <td>$200</td>
+                <td>$300</td>
+                <td class="current">$400</td>
+              </tr>
+
+              <!-- Step 23: Add the Credit row and mark the latest balance as current. -->
+              <tr class="data">
+                <th>Credit <span class="description">The outstanding balance on our credit card.</span></th>
+                <td>$50</td>
+                <td>$50</td>
+                <td class="current">$75</td>
+              </tr>
+
+              <!-- Step 24: Add the liability totals with a full label for screen readers. -->
+              <tr class="total">
+                <th>Total <span class="sr-only">Liabilities</span></th>
+                <td>$750</td>
+                <td>$600</td>
+                <td class="current">$475</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Step 25: Set up the Net Worth caption, head, and body. -->
+          <table>
+            <caption>Net Worth</caption>
+            <thead>
+              <!-- Step 26: Add the empty cell and three screen reader year headings. -->
+              <tr>
+                <td></td>
+                <th><span class="sr-only">2019</span></th>
+                <th><span class="sr-only">2020</span></th>
+                <th><span class="sr-only">2021</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Step 27: Add the net worth totals and mark the 2021 amount as current. -->
+              <tr class="total">
+                <th>Total <span class="sr-only">Net Worth</span></th>
+                <td>$-171</td>
+                <td>$136</td>
+                <td class="current">$334</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

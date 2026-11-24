@@ -1,0 +1,202 @@
+/* Step 47: Add !important to each visually hidden declaration. */
+span[class~="sr-only"] {
+  /* Step 30: Target spans with the sr-only class and remove their borders. */
+  border: 0 !important;
+
+  /* Step 31: Clip the visible area. */
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+
+  /* Step 32: Shrink the box to one pixel in each direction. */
+  height: 1px !important;
+  width: 1px !important;
+
+  /* Step 34: Take the spans out of normal layout. */
+  position: absolute !important;
+
+  /* Step 33: Hide overflow and prevent wrapping. */
+  overflow: hidden !important;
+  white-space: nowrap !important;
+
+  /* Step 34: Remove padding and offset the tiny box. */
+  padding: 0 !important;
+  margin: -1px !important;
+}
+
+/* Step 28: Set the root element's box sizing to border-box. */
+html {
+  box-sizing: border-box;
+}
+
+/* Step 29: Set the page's default font and text color. */
+body {
+  font-family: sans-serif;
+  color: #0a0a23;
+}
+
+/* Step 35: Center the heading block and give it room around the text. */
+h1 {
+  max-width: 37.25rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem;
+}
+
+/* Step 36: Display Balance Sheet above the company name with a gap. */
+h1 .flex {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+/* Step 37: Make the company name smaller using its order in the HTML. */
+h1 .flex span:first-of-type {
+  font-size: 0.7em;
+}
+
+/* Step 38: Make Balance Sheet the larger line. */
+h1 .flex span:last-of-type {
+  font-size: 1.2em;
+}
+
+/* Step 39: Center the balance sheet and add a border. */
+section {
+  max-width: 40rem;
+  margin: 0 auto;
+  border: 2px solid #d0d0d5;
+}
+
+#years {
+  /* Step 40: Align the years to the right and pin the bar while scrolling. */
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 0;
+
+  /* Step 41: Use white text on a dark background. */
+  background: #0a0a23;
+  color: #fff;
+
+  /* Step 42: Extend the bar over the border and compensate with right padding. */
+  padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0;
+  margin: 0 -2px;
+
+  /* Step 43: Stack the sticky bar above the table content. */
+  z-index: 999;
+}
+
+/* Step 44: Give the year labels equal widths and right-align them. */
+#years span[class] {
+  font-weight: bold;
+  width: 4.5rem;
+  text-align: right;
+}
+
+/* Step 45: Give the tables breathing room on the sides and bottom. */
+.table-wrap {
+  padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+/*
+  Step 46: Used span:not(.sr-only) to set visible spans to normal weight.
+  Step 48: Simplified that selector to span after Step 47.
+  Step 64: Removed the temporary span rule once specific styles handled its job.
+*/
+
+table {
+  /* Step 49: Merge neighboring borders and remove the table's own border. */
+  border-collapse: collapse;
+  border: 0;
+
+  /* Step 50: Fill the wrapper and make each table a reference point for its caption. */
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
+
+table caption {
+  /* Step 51: Style captions as blue section headings. */
+  color: #356eaf;
+  font-size: 1.3em;
+  font-weight: normal;
+
+  /* Step 52: Position each caption just above its table. */
+  position: absolute;
+  top: -2.25rem;
+  left: 0.5rem;
+}
+
+/* Step 53: Set a consistent width for the amount cells. */
+tbody td {
+  width: 4rem;
+}
+
+/* Step 54: Leave the remaining width for the row headings. */
+tbody th {
+  width: calc(100% - 12rem);
+}
+
+/* Step 55: Give total rows a bold weight and a double bottom border. */
+tr[class="total"] {
+  border-bottom: 4px double #0a0a23;
+  font-weight: bold;
+}
+
+/* Step 56: Left-align and pad the total labels. */
+tr[class="total"] th {
+  text-align: left;
+  padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+/* Step 57: Right-align the amounts in the total rows. */
+tr.total td {
+  text-align: right;
+  padding: 0 0.25rem;
+}
+
+/* Step 58: Add extra right padding to the third amount cell. */
+tr.total td:nth-of-type(3) {
+  padding-right: 0.5rem;
+}
+
+/* Step 59: Highlight total rows on hover. */
+tr.total:hover {
+  background-color: #99c9ff;
+}
+
+/* Step 60: Italicize the current-year amounts. */
+td.current {
+  font-style: italic;
+}
+
+/* Step 61: Use matching color stops to make a sharp gray strip above white. */
+tr.data {
+  background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem);
+}
+
+/* Step 62: Left-align the data row labels and adjust their spacing. */
+tr.data th {
+  text-align: left;
+  padding-top: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+/* Step 63: Put each description on its own line and extend it beneath the amounts. */
+tr.data th .description {
+  display: block;
+  font-weight: normal;
+  font-style: italic;
+  padding: 1rem 0 0.75rem;
+  margin-right: -13.5rem;
+}
+
+/* Step 65: Align the data amounts to the top-right of their cells. */
+tr.data td {
+  vertical-align: top;
+  padding: 0.3rem 0.25rem 0;
+  text-align: right;
+}
+
+/* Step 66: Match the final data column's right padding to the total rows. */
+tr.data td:last-of-type {
+  padding-right: 0.5rem;
+}
