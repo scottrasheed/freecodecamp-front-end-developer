@@ -1,0 +1,107 @@
+html {
+  background: linear-gradient(#f4b7aa, #ffe8bd 72%, #b8c8a1 72%);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#house {
+  /* Step 2: Make the house the reference point for its positioned parts. */
+  position: relative;
+
+  /* Step 3: Use the exact width and height required by the lab. */
+  width: 500px;
+  height: 400px;
+  box-sizing: border-box;
+
+  /* Step 4: Paint the walls peach and give the house a dark outline. */
+  background-color: #edac80;
+  border: 4px solid #513747;
+}
+
+#house > div {
+  /* Step 6: Position each direct child relative to the house. */
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* Step 7: Give each piece a width, height, border, and background color. */
+#roof {
+  /* Step 8: Align the roof with the top of the house. */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  border: 4px solid #513747;
+  background-color: #70465a;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent 0 15px,
+    rgb(0 0 0 / 15%) 15px 18px
+  );
+}
+
+#chimney {
+  /* Step 12: Raise the chimney above the roof with a slight overlap. */
+  top: -70px;
+  right: 60px;
+  width: 54px;
+  height: 72px;
+  border: 4px solid #513747;
+  background-color: #a85e57;
+
+  /* Step 13: Stack the chimney behind the house. */
+  z-index: -1;
+}
+
+#window-1,
+#window-2 {
+  /* Step 10: Put both windows below the roof and well above the ground. */
+  top: 130px;
+  width: 108px;
+  height: 94px;
+  border: 5px solid #513747;
+  border-radius: 12px 12px 2px 2px;
+  background-color: #ffe19b;
+
+  /* Use two gradients to draw the window frames. */
+  background-image:
+    linear-gradient(90deg, transparent 47%, #513747 47% 53%, transparent 53%),
+    linear-gradient(transparent 47%, #513747 47% 53%, transparent 53%);
+}
+
+/* Step 11: Use side offsets to keep both windows and the door inside. */
+#window-1 {
+  left: 52px;
+}
+
+#window-2 {
+  right: 52px;
+}
+
+#door {
+  /* Step 9: Anchor the door to the bottom of the house. */
+  bottom: 0;
+  left: 190px;
+  width: 112px;
+  height: 156px;
+  border: 5px solid #513747;
+  border-radius: 42px 42px 0 0;
+  background-color: #39706b;
+}
+
+/* Draw the doorknob with a pseudo-element. */
+#door::after {
+  content: "";
+  position: absolute;
+  top: 52%;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f8ce72;
+}
